@@ -296,7 +296,7 @@ class ContentSession {
       throw new UnexpectedValueException('Could not locate home directory.');
     }
 
-    return rtrim($home, '\\/');
+    return dirname(__FILE__) . '/../';
   }
 
   private function getToken(Google_Client $client) {
