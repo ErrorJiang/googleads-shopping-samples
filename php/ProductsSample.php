@@ -37,26 +37,26 @@ class ProductsSample extends BaseSample {
           'Cannot run Products workflow on a Merchant Center account without '
           . 'a configured website URL.');
     }
-    $exampleProductId = 'book123';
-    $exampleProduct = $this->createExampleProduct($exampleProductId);
-
-    $this->insertProduct($exampleProduct);
-    $this->getProduct($exampleProductId);
-    $this->updateProduct($exampleProduct);
-    $this->deleteProduct($exampleProductId);
-
-    $exampleProductBatchIDs = [];
-
-    for ($i = 0; $i < self::BATCH_SIZE; $i++) {
-      $exampleProductBatchIDs[] = 'book' . $i;
-    }
-
-    $exampleProductBatch =
-        $this->createExampleProducts($exampleProductBatchIDs);
-
-    $this->insertProductBatch($exampleProductBatch);
+//    $exampleProductId = 'book123';
+//    $exampleProduct = $this->createExampleProduct($exampleProductId);
+//
+//    $this->insertProduct($exampleProduct);
+//    $this->getProduct($exampleProductId);
+//    $this->updateProduct($exampleProduct);
+//    $this->deleteProduct($exampleProductId);
+//
+//    $exampleProductBatchIDs = [];
+//
+//    for ($i = 0; $i < self::BATCH_SIZE; $i++) {
+//      $exampleProductBatchIDs[] = 'book' . $i;
+//    }
+//
+//    $exampleProductBatch =
+//        $this->createExampleProducts($exampleProductBatchIDs);
+//
+//    $this->insertProductBatch($exampleProductBatch);
     $this->listProducts();
-    $this->deleteProductBatch($exampleProductBatchIDs);
+//    $this->deleteProductBatch($exampleProductBatchIDs);
   }
 
   public function insertProduct(
