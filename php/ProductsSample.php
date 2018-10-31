@@ -59,8 +59,7 @@ class ProductsSample extends BaseSample {
 //    $this->deleteProductBatch($exampleProductBatchIDs);
   }
 
-  public function insertProduct(
-      Google_Service_ShoppingContent_Product $product) {
+  public function insertProduct(Google_Service_ShoppingContent_Product $product) {
     $response = $this->session->service->products->insert(
         $this->session->merchantId, $product);
 
@@ -120,12 +119,10 @@ class ProductsSample extends BaseSample {
       $entries[] = $entry;
     }
 
-    $batchRequest =
-        new Google_Service_ShoppingContent_ProductsCustomBatchRequest();
+    $batchRequest = new Google_Service_ShoppingContent_ProductsCustomBatchRequest();
     $batchRequest->setEntries($entries);
 
-    $batchResponse =
-        $this->session->service->products->custombatch($batchRequest);
+    $batchResponse = $this->session->service->products->custombatch($batchRequest);
 
     printf("Inserted %d products.\n", count($batchResponse->entries));
 
